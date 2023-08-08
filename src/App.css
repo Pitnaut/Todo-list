@@ -1,12 +1,11 @@
-* {
-  margin: 0;
-  padding: 0;
-  background-color: #cae0ba;
-}
-
 .title {
   text-align: center;
   margin-top: 5%;
   font-size: 3rem;
-  font-family: REM;
+  font-family: "Roboto Mono";
+  position: relative;
+}
+
+.title:hover {
+  cursor: default;
 }
