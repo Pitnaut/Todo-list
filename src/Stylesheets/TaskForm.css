@@ -1,0 +1,14 @@
+.task-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.task-input {
+  outline: none;
+}
+
+.task-button {
+  
+}

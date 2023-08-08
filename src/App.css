@@ -9,3 +9,7 @@
 .title:hover {
   cursor: default;
 }
+
+header {
+  margin-bottom: 5%;
+}
