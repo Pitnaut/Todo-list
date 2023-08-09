@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import TaskForm from "./TaskForm";
 import Task from "./Task";
-import { addTask } from "../Helper/helper";
+import { addTask, deleteTask, markDone } from "../Helper/helper";
 import "../Stylesheets/TaskList.css";
 
 const TaskList = () => {
@@ -19,9 +19,11 @@ const TaskList = () => {
               id={task.id}
               text={task.text}
               done={task.done}
+              taskDelete={(id) => deleteTask(id, tasks, setTasks)}
+              taskDone={(id) => markDone(id, tasks, setTasks)}
             />
           )
-        }
+        };
       </div>
     </>
   )

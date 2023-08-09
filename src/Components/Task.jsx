@@ -16,6 +16,6 @@ const Task = ({ id, text, done, taskDone, taskDelete }) => {
       </div>
     </div>
   );
-}
+};
 
 export default Task;

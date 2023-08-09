@@ -5,18 +5,25 @@ const addTask = (task, tasks, setTasks) => {
     task.text = task.text.trim();
     const updatedTasks = [task, ...tasks]
     setTasks(updatedTasks)
-  }
-}
+  };
+};
 
 //Delete Task
-const deleteTask = (id) => {
-
-}
+const deleteTask = (id, tasks, setTasks) => {
+  const updatedTasks = tasks.filter(task => task.id !== id);
+  setTasks(updatedTasks);
+};
 
 //Mark task as completed
-const markDone = (id) => {
-
-}
+const markDone = (id, tasks, setTasks) => {
+  const updatedTasks = tasks.map(task => {
+    if (task.id === id) {
+      task.done = !task.done;
+    }
+    return task
+  });
+  setTasks(updatedTasks);
+};
 
 //Cancel update
 const cancelUpdate = () => {
