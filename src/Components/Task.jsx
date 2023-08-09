@@ -3,13 +3,15 @@ import '../Stylesheets/Task.css';
 import { AiFillCloseCircle } from "react-icons/ai";
 
 
-const Task = ({ text, done }) => {
+const Task = ({ id, text, done, taskDone, taskDelete }) => {
   return (
     <div className={done ? "task-container done" : "task-container"}>
-      <div className="task-text">
+      <div className="task-text"
+           onClick={()=> taskDone(id)} >
         {text}
       </div>
-      <div className="task-icon-container">
+      <div className="task-icon-container"
+           onClick={()=> taskDelete(id)}>
         <AiFillCloseCircle className="delete-icon" />
       </div>
     </div>
