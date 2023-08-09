@@ -1,6 +1,5 @@
 //Add Task
 const addTask = (task, tasks, setTasks) => {
-  console.log(task)
   if(task.text.trim()) {
     task.text = task.text.trim();
     const updatedTasks = [task, ...tasks]

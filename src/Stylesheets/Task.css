@@ -35,9 +35,9 @@
 }
 
 .delete-icon {
-  width: 40px;
-  height: 40px;
-  margin: 5px;
+  width: 2rem;
+  height: 2rem;
+  margin: 5%
 }
 
 .task-container.done {

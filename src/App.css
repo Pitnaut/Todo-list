@@ -1,15 +1,49 @@
+.todo-container {
+
+}
+
+header {
+  margin-bottom: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+  background-color: #77ac77;
+}
+
 .title {
   text-align: center;
   margin-top: 5%;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-family: "Roboto Mono";
   position: relative;
+  display: inline-block;
+  color: black;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.title:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 .title:hover {
   cursor: default;
 }
 
-header {
-  margin-bottom: 5%;
+.pen-icon {
+  width: 3rem;
+  height: 3rem;
 }

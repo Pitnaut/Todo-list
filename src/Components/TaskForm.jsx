@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import '../Stylesheets/TaskForm.css'
-import { v4 as uuidv4 } from 'uuid'
+import '../Stylesheets/TaskForm.css';
+import { v4 as uuidv4 } from 'uuid';
 
 const TaskForm = ({ onSubmit }) => {
 
