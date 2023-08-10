@@ -10,17 +10,17 @@
   border: none;
   cursor: pointer;
   color:black;
-  box-shadow: 5px 5px 5px black;
+  box-shadow: 5px 5px 0px black;
   background-color: #fdead3;
   margin-top: 5%;
 
 }
 
-
 .task-text {
   width: 100%;
   height: 100%;
-  font-size: 1rem;
+  font-size: .95rem;
+  margin-right: 1%;
   display: flex;
   align-items: center;
   font-family: "Roboto Mono";
@@ -30,28 +30,30 @@
 .task-icon-container {
   width: 2rem;
   height: 2rem;
+  margin-left: .1rem;
 }
 
 .delete-icon {
-  width: 1.5rem;
+  width: 1.2rem;
   height: 2rem;
   color: #db1d26d3
 }
 
 .done-icon {
-  width: 1.5rem;
+  width: 1.3rem;
   height: 2rem;
   color: #178f1dd3
 }
 
 .edit-icon {
-  width: 1.5rem;
+  width: 1.3rem;
   height: 2rem;
   color: purple;
 }
 
 
 .task-container.done {
-  background-color: blueviolet;
+  background-color: #fdead38c;
   text-decoration: line-through;
+  color: rgb(80, 75, 75);
 }

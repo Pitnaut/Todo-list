@@ -6,7 +6,7 @@ import './App.css';
 function App() {
 
   return (
-    <div ref={parent} className="todo-container">
+    <div className="todo-container">
       <header>
         <h1 className="title">To-Do-List</h1>
         <AiOutlineEdit className='pen-icon'/>

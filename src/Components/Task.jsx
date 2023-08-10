@@ -1,6 +1,8 @@
 import React from "react";
 import '../Stylesheets/Task.css';
 import { AiOutlineCloseCircle, AiOutlineCheckCircle, AiOutlineEdit } from "react-icons/ai";
+import { FaRegTrashAlt, FaRegCheckCircle, } from "react-icons/fa"
+import { FaRegPenToSquare } from "react-icons/fa6"
 
 
 const Task = ({ id, text, done, taskDone, taskDelete }) => {
@@ -10,16 +12,16 @@ const Task = ({ id, text, done, taskDone, taskDelete }) => {
         {text}
       </div>
       <div className="task-icon-container"
-           onClick={()=> taskDelete(id)}>
-        <AiOutlineEdit className="edit-icon" />
-      </div>
-      <div className="task-icon-container"
            onClick={()=> taskDone(id)}>
-        <AiOutlineCheckCircle className="done-icon" />
+        <FaRegCheckCircle className="done-icon" />
       </div>
       <div className="task-icon-container"
            onClick={()=> taskDelete(id)}>
-        <AiOutlineCloseCircle className="delete-icon" />
+        <FaRegPenToSquare className="edit-icon" />
+      </div>
+      <div className="task-icon-container"
+           onClick={()=> taskDelete(id)}>
+        <FaRegTrashAlt className="delete-icon" />
       </div>
     </div>
   );

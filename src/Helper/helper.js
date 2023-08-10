@@ -2,7 +2,7 @@
 const addTask = (task, tasks, setTasks) => {
   if(task.text.trim()) {
     task.text = task.text.trim();
-    const updatedTasks = [task, ...tasks]
+    const updatedTasks = [...tasks, task]
     setTasks(updatedTasks)
   };
 };

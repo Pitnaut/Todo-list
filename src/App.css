@@ -1,5 +1,11 @@
 header {
-  margin-bottom: 5%;
+  max-width: 22rem;
+  border: 2px solid black;
+  background-color: #366fca;
+  box-shadow: 5px 5px 0px black;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -41,4 +47,17 @@ header {
 .pen-icon {
   width: 3rem;
   height: 3rem;
+}
+
+.to-do-main {
+  max-width: 22rem;
+  border: 2px solid black;
+  background-color: #366fca;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-left: 3%;
+  margin-right: 3%;
+  display: flex;
+  margin: 0 auto;
+  box-shadow: 5px 5px 0px black;
 }

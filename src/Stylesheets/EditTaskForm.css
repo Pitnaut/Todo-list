@@ -1,4 +1,4 @@
-.task-form {
+.edit-task-form {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
@@ -7,7 +7,7 @@
   box-shadow: 5px 5px 0px black;
 }
 
-.task-input {
+.edit-task-input {
   width: 18rem;
   height: 1.5rem;
   padding-top: .5rem;
@@ -20,21 +20,46 @@
   background-color: #fdead3;
 }
 
-.task-input:focus {
+.edit-task-input:focus {
   border: none;
   outline: none;
 }
 
-.task-button {
+.update-task-button {
   outline: none;
-  background-color: #0747ad;
+  background-color: rgb(8, 119, 71);
   color: #fdead3;
   width: 3.2rem;
   height: 2.7rem;
   padding-top: .5rem;
   padding-bottom: .5rem;
-  font-size: 1.5rem;
+  font-size: .8rem;
   cursor: pointer;
   border: 2px solid black;
   border-left: none;
+  border-right: none;
+}
+
+.cancel-update-button {
+  outline: none;
+  background-color: #f1bd2d;
+  color: black;
+  width: 3.2rem;
+  height: 2.7rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  font-size: .8rem;
+  cursor: pointer;
+  border: 2px solid black;
+  border-left: none;
+}
+
+.update-icon {
+  width: 2rem;
+  height: 1.5rem;
+}
+
+.cancel-icon {
+  width: 2rem;
+  height: 1.5rem;
 }
