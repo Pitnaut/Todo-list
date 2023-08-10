@@ -1,14 +1,40 @@
 .task-form {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
+  margin-bottom: 6%;
+  box-shadow: 5px 5px 5px black;
 }
 
 .task-input {
+  width: 18rem;
+  height: 1.5rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  padding-left: 1rem;
+  font-size: 1rem;
+  color: black;
+  border: 2px solid black;
+  border-right: none;
+  background-color: #fdead3;
+}
+
+.task-input:focus {
+  border: none;
   outline: none;
 }
 
 .task-button {
-  
+  outline: none;
+  background-color: #366fca;
+  color: #fdead3;
+  width: 3.2rem;
+  height: 2.7rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: 2px solid black;
+  border-left: none;
 }

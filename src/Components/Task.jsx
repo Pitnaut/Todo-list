@@ -1,6 +1,6 @@
 import React from "react";
 import '../Stylesheets/Task.css';
-import { AiFillCloseCircle } from "react-icons/ai";
+import { AiOutlineCloseCircle, AiOutlineCheckCircle, AiOutlineEdit } from "react-icons/ai";
 
 
 const Task = ({ id, text, done, taskDone, taskDelete }) => {
@@ -12,7 +12,15 @@ const Task = ({ id, text, done, taskDone, taskDelete }) => {
       </div>
       <div className="task-icon-container"
            onClick={()=> taskDelete(id)}>
-        <AiFillCloseCircle className="delete-icon" />
+        <AiOutlineEdit className="edit-icon" />
+      </div>
+      <div className="task-icon-container"
+           onClick={()=> taskDelete(id)}>
+        <AiOutlineCheckCircle className="done-icon" />
+      </div>
+      <div className="task-icon-container"
+           onClick={()=> taskDelete(id)}>
+        <AiOutlineCloseCircle className="delete-icon" />
       </div>
     </div>
   );

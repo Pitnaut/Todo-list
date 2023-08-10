@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../Stylesheets/TaskForm.css';
 import { v4 as uuidv4 } from 'uuid';
+import { BiAddToQueue } from "react-icons/bi"
 
 const TaskForm = ({ onSubmit }) => {
 
@@ -32,7 +33,7 @@ const TaskForm = ({ onSubmit }) => {
         onChange={handleChange}       
       />
       <button className="task-button">
-        Add task
+        <BiAddToQueue />
       </button>
     </form>
   )

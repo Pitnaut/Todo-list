@@ -1,44 +1,55 @@
 .task-container {
   color:aliceblue;
-  width: 500px;
-  min-height: 65px;
-  background-color: #1b1b32;
-  margin: 5px;
-  padding: 8px 15px 8px 20px;
+  width: 20rem;
+  min-height: 1.5rem;
+  padding: .5rem .5rem .5rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-radius: 7px;
-  border: 1px solid wheat;
+  align-content: center;
+  border: none;
   cursor: pointer;
+  color:black;
+  box-shadow: 5px 5px 5px black;
+  background-color: #fdead3;
+  margin-top: 5%;
+
 }
 
-.task-container:nth-child(3n + 1) {
-  background-color: #1b1b32;
-}
-
-.task-container:nth-child(3n + 2) {
-  background-color: #2a2a40;
-}
-
-.task-container:nth-child(3n + 3) {
-  background-color: #3b3b4f;
-}
 
 .task-text {
   width: 100%;
   height: 100%;
-  font-size: 20px;
+  font-size: 1rem;
   display: flex;
   align-items: center;
+  font-family: "Roboto Mono";
   overflow-wrap: anywhere;
 }
 
-.delete-icon {
+.task-icon-container {
   width: 2rem;
   height: 2rem;
-  margin: 5%
 }
+
+.delete-icon {
+  width: 1.5rem;
+  height: 2rem;
+  color: #db1d26d3
+}
+
+.done-icon {
+  width: 1.5rem;
+  height: 2rem;
+  color: #178f1dd3
+}
+
+.edit-icon {
+  width: 1.5rem;
+  height: 2rem;
+  color: purple;
+}
+
 
 .task-container.done {
   background-color: blueviolet;

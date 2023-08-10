@@ -1,5 +1,12 @@
+.form-and-list {
+  margin: 0 auto;
+  width: 19.2rem;
+}
+
 .task-list-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  border-top: none;
+  border-top: none;
 }

@@ -11,7 +11,7 @@ const TaskList = () => {
   const [parent] = useAutoAnimate();
 
   return (
-    <div>
+    <div className="form-and-list">
       <TaskForm onSubmit={(task) => addTask(task, tasks, setTasks)} />
       <div className="task-list-container" ref={parent}>
         {
