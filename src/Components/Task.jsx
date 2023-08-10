@@ -6,8 +6,7 @@ import { AiOutlineCloseCircle, AiOutlineCheckCircle, AiOutlineEdit } from "react
 const Task = ({ id, text, done, taskDone, taskDelete }) => {
   return (
     <div className={done ? "task-container done" : "task-container"}>
-      <div className="task-text"
-           onClick={()=> taskDone(id)} >
+      <div className="task-text">
         {text}
       </div>
       <div className="task-icon-container"
@@ -15,7 +14,7 @@ const Task = ({ id, text, done, taskDone, taskDelete }) => {
         <AiOutlineEdit className="edit-icon" />
       </div>
       <div className="task-icon-container"
-           onClick={()=> taskDelete(id)}>
+           onClick={()=> taskDone(id)}>
         <AiOutlineCheckCircle className="done-icon" />
       </div>
       <div className="task-icon-container"
