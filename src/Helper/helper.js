@@ -24,13 +24,13 @@ const markDone = (id, tasks, setTasks) => {
   setTasks(updatedTasks);
 };
 
-//Cancel update
-const cancelUpdate = () => {
-
-}
-
 //Change task for Update
 const changeTask = (e) => {
+  
+}
+
+//Cancel update
+const cancelUpdate = () => {
 
 }
 

@@ -5,13 +5,15 @@ import { GrUpgrade } from "react-icons/gr";
 
 const EditTaskForm = () => {
 
+ 
+
   return (
     <form 
       className="edit-task-form">
       <input
         className="edit-task-input"
         type="text"
-        name="text"       
+        name="text"  
       />
       <button className="update-task-button">
         <GrUpgrade className='update-icon'/>
