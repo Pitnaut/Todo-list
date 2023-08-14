@@ -33,6 +33,11 @@
   margin-left: .1rem;
 }
 
+.edit-icon.disabled {
+  cursor:not-allowed;
+  color: gray;
+}
+
 .delete-icon {
   width: 1.2rem;
   height: 2rem;

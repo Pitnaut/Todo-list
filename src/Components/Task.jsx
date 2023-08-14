@@ -3,9 +3,6 @@ import '../Stylesheets/Task.css';
 import { FaRegTrashAlt, FaRegCheckCircle, } from "react-icons/fa";
 import { FaRegPenToSquare } from "react-icons/fa6";
 import EditTaskForm from "./EditTaskForm";
-import { useAutoAnimate } from '@formkit/auto-animate/react';
-
-
 
 const Task = ({ id, text, done, taskDone, taskDelete }) => {
 
@@ -14,7 +11,9 @@ const Task = ({ id, text, done, taskDone, taskDelete }) => {
 
 
   const handleEditClick = () => {
-    setShowEditForm(true);
+    if (!done) {
+      setShowEditForm(true);
+    }
   };
 
   const handleUpdate = (updatedText) => {
@@ -24,9 +23,6 @@ const Task = ({ id, text, done, taskDone, taskDelete }) => {
   const handleCancelClick = () => {
     setShowEditForm(false)
   };
-
-  const [parent] = useAutoAnimate();
- 
 
   return (
     <>
@@ -38,16 +34,17 @@ const Task = ({ id, text, done, taskDone, taskDelete }) => {
             onClick={()=> taskDone(id)}>
           <FaRegCheckCircle className="done-icon" />
         </div>
-        <div className="task-icon-container"
-              onClick={handleEditClick}>
-          <FaRegPenToSquare className="edit-icon" />
+        <div className="task-icon-container" onClick={handleEditClick}>
+          <FaRegPenToSquare 
+            className={done ? "edit-icon disabled" : "edit-icon"} 
+            disabled={done} />
         </div>
         <div className="task-icon-container"
             onClick={()=> taskDelete(id)}>
           <FaRegTrashAlt className="delete-icon" />
         </div>
       </div>
-      <div ref={parent}>
+      <div>
         {showEditForm && (
           <EditTaskForm 
             text={editedText}
@@ -59,3 +56,4 @@ const Task = ({ id, text, done, taskDone, taskDelete }) => {
 };
 
 export default Task;
+
