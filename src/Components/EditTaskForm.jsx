@@ -3,10 +3,20 @@ import "../Stylesheets/EditTaskForm.css";
 import { FaRegCircleXmark } from "react-icons/fa6";
 import { GrUpgrade } from "react-icons/gr";
 
-const EditTaskForm = ({ onCancel }) => {
+const EditTaskForm = ({ text, onUpdate, onCancel }) => {
 
-  const handleCancelClick = () => {
+  const [editText, setEditText] = useState(text)
+
+  const handleCancelClick = (e) => {
+    e.preventDefault();
     onCancel();
+    console.log("edicion cancelada")
+  };
+
+  const handleUpdateClick = (e) => {
+    e.preventDefault();
+    onUpdate(editText);
+    console.log("cambio realizado correctamente")
   };
  
   return (
@@ -16,8 +26,11 @@ const EditTaskForm = ({ onCancel }) => {
         className="edit-task-input"
         type="text"
         name="text"  
+        value={editText}
+        onChange={(e) => setEditText(e.target.value)}
       />
-      <button className="update-task-button">
+      <button className="update-task-button"
+              onClick={handleUpdateClick} >
         <GrUpgrade className='update-icon'/>
       </button>
       <button className="cancel-update-button"
