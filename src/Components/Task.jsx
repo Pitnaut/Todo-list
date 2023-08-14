@@ -13,6 +13,10 @@ const Task = ({ id, text, done, taskDone, taskDelete }) => {
     setShowEditForm(true);
   };
 
+  const handleCancelClick = () => {
+    setShowEditForm(false)
+  }
+ 
 
   return (
     <>
@@ -34,7 +38,7 @@ const Task = ({ id, text, done, taskDone, taskDelete }) => {
         </div>
       </div>
       <div>
-        {showEditForm && <EditTaskForm />}
+        {showEditForm && <EditTaskForm onCancel={handleCancelClick} />}
       </div>
     </> 
   );

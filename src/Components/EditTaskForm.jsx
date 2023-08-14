@@ -3,10 +3,12 @@ import "../Stylesheets/EditTaskForm.css";
 import { FaRegCircleXmark } from "react-icons/fa6";
 import { GrUpgrade } from "react-icons/gr";
 
-const EditTaskForm = () => {
+const EditTaskForm = ({ onCancel }) => {
 
+  const handleCancelClick = () => {
+    onCancel();
+  };
  
-
   return (
     <form 
       className="edit-task-form">
@@ -18,7 +20,8 @@ const EditTaskForm = () => {
       <button className="update-task-button">
         <GrUpgrade className='update-icon'/>
       </button>
-      <button className="cancel-update-button">
+      <button className="cancel-update-button"
+              onClick={handleCancelClick}>
         <FaRegCircleXmark className='cancel-icon'/>
       </button>
     </form>

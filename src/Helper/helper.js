@@ -24,19 +24,5 @@ const markDone = (id, tasks, setTasks) => {
   setTasks(updatedTasks);
 };
 
-//Change task for Update
-const changeTask = (e) => {
-  
-}
 
-//Cancel update
-const cancelUpdate = () => {
-
-}
-
-//Update task
-const updateTask = () => {
-
-}
-
-export { addTask, deleteTask, markDone, cancelUpdate, changeTask, updateTask }
+export { addTask, deleteTask, markDone }
