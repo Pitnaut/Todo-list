@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import TaskForm from "./TaskForm";
 import Task from "./Task";
 import { addTask, deleteTask, markDone} from "../Helper/helper";
@@ -7,9 +7,22 @@ import "../Stylesheets/TaskList.css";
 
 const TaskList = () => {
 
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(
+    !localStorage.getItem("tasks") ? [] : JSON.parse(localStorage.getItem("tasks"))
+    );
 
   const [parent] = useAutoAnimate();
+
+  useEffect(() => {
+    const savedTasks = localStorage.getItem("tasks");
+    if (savedTasks) {
+      setTasks(JSON.parse(savedTasks));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+  }, [tasks]);
 
 
   return (
@@ -36,3 +49,4 @@ const TaskList = () => {
 }
 
 export default TaskList;
+
