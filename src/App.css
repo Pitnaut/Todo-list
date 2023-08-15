@@ -1,5 +1,5 @@
 header {
-  max-width: 22rem;
+  max-width: 20rem;
   border: 2px solid black;
   background-color: #366fca;
   box-shadow: 5px 5px 0px black;
@@ -50,7 +50,7 @@ header {
 }
 
 .to-do-main {
-  max-width: 22rem;
+  max-width: 20rem;
   border: 2px solid black;
   background-color: #366fca;
   padding-top: 2rem;
