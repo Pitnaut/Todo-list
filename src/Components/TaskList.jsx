@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import TaskForm from "./TaskForm";
 import Task from "./Task";
+import TaskSummary from "../Components/TaskSummary"
 import { addTask, deleteTask, markDone} from "../Helper/helper";
 import { useAutoAnimate } from '@formkit/auto-animate/react';
 import "../Stylesheets/TaskList.css";
@@ -36,6 +37,9 @@ const TaskList = () => {
             />
           )
         }
+      </div>
+      <div>
+        <TaskSummary />
       </div>
     </div>
   )
