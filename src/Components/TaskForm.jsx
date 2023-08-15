@@ -19,6 +19,7 @@ const TaskForm = ({ onSubmit }) => {
       done: false
     }
     onSubmit(newTask);
+    setInput("");
   };
 
   return (
@@ -30,6 +31,7 @@ const TaskForm = ({ onSubmit }) => {
         type="text"
         placeholder="New task..."
         name="text"
+        value={input}
         onChange={handleChange}       
       />
       <button className="task-button">
