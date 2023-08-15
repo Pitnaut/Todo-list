@@ -27,14 +27,32 @@
   overflow-wrap: anywhere;
 }
 
-.task-icon-container {
+.task-icon-container-done {
+  width: 2rem;
+  height: 1.9rem;
+  margin-left: .1rem;
+  margin-right: .1rem;
+}
+
+.task-icon-container-edit,
+.task-icon-container-delete {
   width: 2rem;
   height: 2rem;
   margin-left: .1rem;
 }
 
+.task-icon-container-done.disabled .done-icon {
+  cursor: not-allowed;
+  color: gray;
+}
+
 .edit-icon.disabled {
   cursor:not-allowed;
+  color: gray;
+}
+
+.task-icon-container-edit.disabled .edit-icon {
+  cursor: not-allowed;
   color: gray;
 }
 
@@ -48,6 +66,12 @@
   width: 1.3rem;
   height: 2rem;
   color: #178f1dd3
+}
+
+.done-icon.disabled {
+  cursor:not-allowed;
+  color: gray;
+  pointer-events: none;
 }
 
 .edit-icon {

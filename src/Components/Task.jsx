@@ -30,16 +30,19 @@ const Task = ({ id, text, done, taskDone, taskDelete }) => {
         <div className="task-text">
           {editedText}
         </div>
-        <div className="task-icon-container"
-            onClick={()=> taskDone(id)}>
-          <FaRegCheckCircle className="done-icon" />
+        <div className={`task-icon-container-done ${showEditForm ? "disabled" : ""}`}
+            onClick={() => {
+              if (!showEditForm) {
+                taskDone(id);
+              }
+            }}>
+          <FaRegCheckCircle 
+            className="done-icon" />
         </div>
-        <div className="task-icon-container" onClick={handleEditClick}>
-          <FaRegPenToSquare 
-            className={done ? "edit-icon disabled" : "edit-icon"} 
-            disabled={done} />
+        <div className={`task-icon-container-edit ${done || showEditForm ? "disabled" : ""}`} onClick={handleEditClick}>
+          <FaRegPenToSquare className="edit-icon" />
         </div>
-        <div className="task-icon-container"
+        <div className="task-icon-container-delete"
             onClick={()=> taskDelete(id)}>
           <FaRegTrashAlt className="delete-icon" />
         </div>
