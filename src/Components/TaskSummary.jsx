@@ -1,10 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Stylesheets/TaskSummary.css";
 
 
-const TaskSummary = () => {
-
-
+const TaskSummary = ({ activeTasks, completedTasks, totalTasks }) => {
 
   return (
     <div className="task-summary">
@@ -12,9 +10,10 @@ const TaskSummary = () => {
         <h1>Task Summary:</h1>
       </div>
       <div className="tasks-completed">
-        <p>Active Tasks:</p>
-        <p>Completed:</p>
-        <p>Percent Completed:</p>
+        <p>TotalTasks: {totalTasks}</p>
+        <p>Active Tasks: {activeTasks}</p>
+        <p>Completed: {completedTasks}</p>
+        <p>Percent Completed: {totalTasks === 0 ? "0%" : ((completedTasks / totalTasks) * 100).toFixed(2) + "%"}</p>
       </div>
     </div>
   )
