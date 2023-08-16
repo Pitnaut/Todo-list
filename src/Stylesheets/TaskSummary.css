@@ -15,9 +15,15 @@
 .task-summary .header {
   font-size: .6rem;
   margin-left: 5%;
+  text-decoration: underline;
 }
 
 .task-summary .tasks-completed {
   margin-left: 5%;
   margin-bottom: 5%;
+}
+
+.task-summary .conglats {
+  font-weight: bold;
+  text-decoration: underline;
 }

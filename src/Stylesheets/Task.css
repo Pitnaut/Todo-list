@@ -7,7 +7,7 @@
   justify-content: space-between;
   align-items: center;
   align-content: center;
-  border: none;
+  border: 2px solid black;
   cursor: pointer;
   color:black;
   box-shadow: 5px 5px 0px black;
@@ -42,17 +42,17 @@
 }
 
 .task-icon-container-done.disabled .done-icon {
-  cursor: not-allowed;
+  cursor: auto;
   color: gray;
 }
 
 .edit-icon.disabled {
-  cursor:not-allowed;
+  cursor: auto;
   color: gray;
 }
 
 .task-icon-container-edit.disabled .edit-icon {
-  cursor: not-allowed;
+  cursor: auto;
   color: gray;
 }
 
@@ -69,7 +69,7 @@
 }
 
 .done-icon.disabled {
-  cursor:not-allowed;
+  cursor: auto;
   color: gray;
   pointer-events: none;
 }

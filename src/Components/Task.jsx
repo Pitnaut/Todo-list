@@ -24,6 +24,7 @@ const Task = ({ id, text, done, taskDone, taskDelete }) => {
     setShowEditForm(false)
   };
 
+
   return (
     <>
       <div className={done ? "task-container done" : "task-container"}>    
